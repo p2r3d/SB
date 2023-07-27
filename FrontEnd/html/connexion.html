@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sophie Bluel - Architecte d'intérieur</title>
+  <meta name="viewport" content="100vh, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+    rel="stylesheet">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../scripts/connexion.js" defer></script>
+</head>
+<body>
+  <header class="divHeader">    
+    <div class="divLogoNav">
+      <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+      <nav>
+        <ul>
+          <li>projets</li>
+          <li>contact</li>
+          <li><a href="#">login</a></li>
+          <li><img src="../assets/icons/instagram.png" alt="Instagram" id="insta"></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="login">
+      <h2 id="loginTitle">Log In</h2>
+      <form method="post" class="divForm">
+        <div class="divFormElements">
+          <label for="idEmail" id="idEmailLabel">Email :</label>
+          <input type="text" name="email" id="idEmail" required>
+        </div>
+        <div class="divFormElements">
+          <label for="idPwd" id="idPwdLabel">Mot de passe :</label>
+          <input type="password" name="password" id="idPwd" required>
+        </div>
+        <div class="divFormElements">
+          <input type="submit" value="Se connecter" id="idSubmit" class="btn">
+          <p id="idForgottenPwd"><a href="#">Mot de passe oublié</a></p>
+        </div>
+        <div>
+          <p id="idErrorMsg"> </p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li>Mentions Légales</li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

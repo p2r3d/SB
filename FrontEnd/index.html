@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/b4aa609cc9.js" crossorigin="anonymous"></script>
+	<script type="module" src="./scripts/store.js"></script>
+	<script type="module" src="./scripts/main.js"></script>
+	<script type="module" src="./scripts/index.js"></script>
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+	<header class="divHeader">
+		<div class="divheadband" style="display:none">
+			<a href="#" class="headbandText">
+				<i class="fa-regular fa-pen-to-square"></i>
+				<p>Mode édition</p>
+			</a>
+			<input type="button" name="publishBtn" class="publishBtn" value="publier les changements">
+		</div>
+		<div class="divLogoNav">
+			<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+			<nav>
+				<ul>
+					<li>projets</li>
+					<li>contact</li>
+					<li><a href="./html/connexion.html">login</a></li>
+					<li><img src="./assets/icons/instagram.png" alt="Instagram" id="insta"></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section id="introduction">
+			<h2 style="display:none">Introduction</h2>
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+				<div id="divModifyLink">
+					<a href="#modal1" class="js-modal" style="display:none">
+						<i class="fa-regular fa-pen-to-square"></i>modifier</a>
+				</div>
+			</figure>
+			<article>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale
+					du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs
+					dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré
+					dans
+					le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice).
+				</p>
+			</article>
+		</section>
+		<section id="portfolio">
+			<div class="divProjectTitle">
+				<h2>Mes Projets</h2>
+				<a href="#modal1" class="js-modal" style="display:none">
+					<i class="fa-regular fa-pen-to-square"></i>modifier</a>
+			</div>
+			<div class="gallery">
+			</div>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Vous avez un projet ? Discutons-en !</p>
+			<form action="#" method="post">
+				<label for="name">Nom</label>
+				<input type="text" name="name" id="name">
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+				<label for="message">Message</label>
+				<textarea name="message" id="message" cols="30" rows="10"></textarea>
+				<input type="submit" value="Envoyer" id="contact-submit">
+			</form>
+		</section>
+		<aside class="modal" id="modal1" style="display:none" aria-hidden="true">
+			<div class="divModal js-modal-stop">
+				<!-- galerie de photos dans la modale-->
+				<div id="divIcones">
+					<i class="fa-solid fa-arrow-left" id="idBack"></i>
+					<i class="fa-solid fa-xmark js-modal-close" id="idClose"></i>
+				</div>
+				<p id="modalTitle">Galerie photo</p>
+				<p id="errorApiMsg" style="display:none"></p>
+				<div class="idPhotosGallery">
+				</div>
+				<hr id="line1">
+				<input type="button" class="btn SelectedFilter" id="idAddPhotoBtn" value="Ajouter une photo">
+				<p id="idDeleteGallery">Supprimer la galerie</p>
+				<!-- formulaire d'ajout de photo dans la modale-->
+				<form id="addPhotoForm" method="post" style="display:none">
+					<div id="divBlue">
+						<div id="divImportPhoto">
+							<i class="fa-regular fa-image"></i>
+							<label for="workAddPhotoInput" id="addPhotoBtn">+ Ajouter photo
+								<input type="file" id="workAddPhotoInput" name="workAddPhotoInput"
+									accept="image/png, image/jpeg, image/jpg">
+							</label>
+							<p>jpg, png : 4mo max</p>
+						</div>
+						<div id="thumbnail">
+							<img id="miniPhoto" src="#" alt="photo" style="display:none">
+						</div>
+					</div>
+					<p id="addPhotoMsg" style="display:none"></p>
+					<div id="divFormAddPhoto">
+						<label for="idTitleAddPhoto">Titre</label>
+						<input type="text" name="title" id="idTitleAddPhoto" maxlength="30">
+						<p id="addTitleMsg" style="display:none"></p>
+						<label for="photoCategories">Catégorie</label>
+						<select id="photoCategories"></select>
+						<hr id="line2">
+						<input type="submit" id="addPhotoSubmitBtn" value="Valider">
+					</div>
+				</form>
+			</div>
+		</aside>
+	</main>
+	<footer>
+		<nav>
+			<ul>
+				<li>Mentions Légales</li>
+			</ul>
+		</nav>
+	</footer>
+</body>
+
+</html>
